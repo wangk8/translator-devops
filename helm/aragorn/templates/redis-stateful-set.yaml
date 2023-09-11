@@ -52,7 +52,6 @@ spec:
     - metadata:
         name: {{ include "aragorn.fullname" . }}-redis-data-volume
       spec:
-        storageClassName: {{ .Values.redis.persistence.storageClass }}
         accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
